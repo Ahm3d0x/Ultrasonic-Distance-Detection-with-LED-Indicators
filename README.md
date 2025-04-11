@@ -119,8 +119,6 @@ Developed by **Ahmed Mohamed Attia**
 - LinkedIn: [ahmed-m-attia-757aa6292](https://linkedin.com/in/ahmed-m-attia-757aa6292)  
 - Email: ahm3d.m.attia@gmail.com  
 """
-readme_path = base_dir / "README.md"
-readme_path.write_text(readme_content)
 
 # File: LICENSE
 license_content = """
