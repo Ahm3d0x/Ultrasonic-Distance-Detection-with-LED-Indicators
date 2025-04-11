@@ -118,16 +118,4 @@ Developed by **Ahmed Mohamed Attia**
 - GitHub: [Ahm3d0x](https://github.com/Ahm3d0x)  
 - LinkedIn: [ahmed-m-attia-757aa6292](https://linkedin.com/in/ahmed-m-attia-757aa6292)  
 - Email: ahm3d.m.attia@gmail.com  
-"""
-
-# File: LICENSE
-license_content = """
-MIT License
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction... (etc.)
-"""
-license_path = base_dir / "LICENSE"
-license_path.write_text(license_content.strip())
 
