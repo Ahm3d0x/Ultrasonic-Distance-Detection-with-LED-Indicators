@@ -19,7 +19,6 @@ This project uses an **HC-SR04 ultrasonic sensor** to measure distance and trigg
 - Arduino Uno (or compatible board)
 - HC-SR04 Ultrasonic Sensor
 - 4x LEDs
-- 4x Resistors (220Ω or 330Ω)
 - Breadboard + jumper wires
 - USB cable
 
