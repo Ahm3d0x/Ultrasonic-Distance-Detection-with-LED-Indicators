@@ -41,7 +41,7 @@ This project uses an **HC-SR04 ultrasonic sensor** to measure distance and trigg
 | LED4 (High) | 4           |
 
 > 💡 **Note:** You may need to change pin 1 if it causes issues with Serial communication.
-![Ultrasonic Distance Detection with LED  Wiring Diagram](fgfg)
+![Ultrasonic Distance Detection with LED  Wiring Diagram]([fgfg](https://github.com/Ahm3d0x/Ultrasonic-Distance-Detection-with-LED-Indicators/blob/main/Ultrasonic%20Distance%20Detection%20with%20LED.png))
 ---
 
 ## 🧠 How It Works
