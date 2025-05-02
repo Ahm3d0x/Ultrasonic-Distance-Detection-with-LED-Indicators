@@ -41,7 +41,7 @@ This project uses an **HC-SR04 ultrasonic sensor** to measure distance and trigg
 | LED4 (High) | 4           |
 
 > 💡 **Note:** You may need to change pin 1 if it causes issues with Serial communication.
-![Ultrasonic Distance Detection with LED  Wiring Diagram]([fgfg](https://github.com/Ahm3d0x/Ultrasonic-Distance-Detection-with-LED-Indicators/blob/main/Ultrasonic%20Distance%20Detection%20with%20LED.png))
+![Ultrasonic Distance Detection with LED  Wiring Diagram](https://github.com/Ahm3d0x/Ultrasonic-Distance-Detection-with-LED-Indicators/blob/main/Ultrasonic%20Distance%20Detection%20with%20LED.png)
 ---
 
 ## 🧠 How It Works
@@ -53,52 +53,7 @@ The code sends a 10µs pulse to the ultrasonic sensor to initiate a reading. The
 
 ---
 
-## 🖥️ Code Overview
 
-```cpp
-#define ECHOPIN 9
-#define TRIGPIN 10
-int lowPins[] = {1, 2};
-int highPins[] = {3, 4};
-
-float distance = 0;
-
-void setup() {
-  Serial.begin(9600);
-  pinMode(ECHOPIN, INPUT);
-  pinMode(TRIGPIN, OUTPUT);
-  for (int i = 0; i < 2; i++) {
-    pinMode(lowPins[i], OUTPUT);
-    pinMode(highPins[i], OUTPUT);
-  }
-}
-
-void loop() {
-  digitalWrite(TRIGPIN, LOW); delayMicroseconds(2);
-  digitalWrite(TRIGPIN, HIGH); delayMicroseconds(10);
-  digitalWrite(TRIGPIN, LOW);
-
-  distance = pulseIn(ECHOPIN, HIGH) / 58.0;
-  Serial.print(distance); Serial.println(" cm");
-
-  if (distance < 15) {
-    for (int i = 0; i < 2; i++) {
-      digitalWrite(lowPins[i], HIGH);
-      digitalWrite(highPins[i], LOW);
-    }
-  } else {
-    for (int i = 0; i < 2; i++) {
-      digitalWrite(lowPins[i], LOW);
-      digitalWrite(highPins[i], HIGH);
-    }
-  }
-
-  delay(200);
-}
-
-
-
-```
 ## 🧠 How It Works
 
 The ultrasonic sensor sends out a signal and measures the time it takes for the echo to return. If the distance is less than 15 cm, two LEDs light up. Otherwise, two different LEDs light up.
